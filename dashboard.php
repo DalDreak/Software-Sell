@@ -3,15 +3,15 @@ include_once("templates/header.php");
 ?>
 
 
-<div id="main-container">
+<div id="main-container2">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <h2>Gerenciar pedidos:</h2>
-            </div>
-            <div class="col-md12 table-container">
-                <table class="table">
-                    <thead>
+                    </div>
+                        <div class="col-md-12 table-container">
+                        <table class="table">
+                        <thead>
                         <tr>
                             <th scope="col"><span>Pedido</span> #</th>
                             <th scope="col">Investimento</th>
@@ -40,7 +40,7 @@ include_once("templates/header.php");
                                 </form>
                             </td>
                             <td>
-                                <form action="process/orders.php" methor="POST">
+                                <form action="process/orders.php" method="POST">
                                     <input type="hidden" name="type" value="delete">
                                     <input type="hidden" name="id" value="1">
                                     <button type="submit" class="delete-btn">

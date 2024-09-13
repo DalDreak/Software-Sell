@@ -14,17 +14,20 @@ html, body{
 }
 /* FOOTER */
 
-footer{
+footer {
     position: relative;
     width: 100%;
     height: 175px;
-    background-color: black;
-    color:white;
+    background-color: #000;
+    color: #FFF;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-}
+  }
+  
+
+  
 
 /* HOME */
 #main-banner{
@@ -51,6 +54,7 @@ footer{
     background: rgba(0, 0, 0, 0.5); /* Sobreposição escura para melhorar a legibilidade */
     z-index: 1;
 }
+    
 
 #main-banner h1 {
     position: relative;
@@ -60,12 +64,6 @@ footer{
     z-index: 2;
     font-size: 2.5rem; /* Ajuste o tamanho da fonte conforme necessário */
     font-weight: bold;
-}
-
-#main-banner h1{
-    color: white;
-    text-align: center;
-    padding: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
@@ -119,3 +117,45 @@ footer{
 .alert p{
     margin-bottom: 0;
 }
+
+/* DASHBOARD */
+
+#main-container2{
+    margin-bottom: 150px;
+    padding: 200px 0%;
+    text-align: center;
+    min-height: 50%;
+}
+.delete-btn, .update-btn {
+    border: none;
+    background-color: transparent;
+  }
+  
+  .delete-btn {
+    padding-top: 10px;
+  }
+  
+  .delete-btn i {
+    color: #721c24;
+    font-size: 20px;
+  }
+  
+  .update-btn {
+    margin-left: 10px;
+  }
+  
+  .update-btn i {
+    color: #004085;
+  }
+
+  .update-form{
+    display:flex;
+    flex-direction: row;
+  }
+  .status-input{
+    width: 65%;
+  }
+  .table ul{
+    text-align: left;
+  }
+  
