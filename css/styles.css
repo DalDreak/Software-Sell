@@ -12,6 +12,30 @@ html, body{
 .navbar.navbar-expand-lg a {
     color:white;
 }
+
+.navbar-nav {
+  display: flex; 
+  width: 100%; 
+  justify-content: space-between; 
+}
+
+.navbar-nav .nav-item {
+  margin-inline: 0; 
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-left: auto; 
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+
+.hidden-on-dashboard {
+  display: none;
+}
+
 /* FOOTER */
 
 footer {

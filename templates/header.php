@@ -35,8 +35,12 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a href="index.php" class="nav-link">Monte seu software"</a>
+                        <a href="index.php" class="nav-link">Monte seu software</a>
                     </li>
+                    <li class="nav-item <?php echo basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'hidden-on-dashboard' : ''; ?>">
+                    <a href="dashboard.php" class="nav-link">Ir para a dashboard</a>
+                    </li>
+                   
                 </ul>
             </div>
             
