@@ -109,6 +109,23 @@
 
             $_SESSION["msg"] = "Pedido removido com sucesso!";
             $_SESSION["status"] = "success";
+
+        // Atualizar o status do pedido
+        } else if ($type === "update"){
+
+            $softwareId = $_POST["id"];
+            $statusId = $_POST["status"];
+
+            $updateQuery = $conn->prepare("UPDATE pedidos SET status_id = :status_id WHERE software_id = :software_id");
+
+            $updateQuery->bindParam(":software_id", $softwareId, PDO::PARAM_INT);
+            $updateQuery->bindParam(":status_id", $statusId, PDO::PARAM_INT);
+
+            $updateQuery->execute();
+
+            $_SESSION["msg"] = "Pedido atualizado com sucesso!";
+            $_SESSION["status"] = "success";
+
         }
 
         // Retorna o usuário para a dashboard
