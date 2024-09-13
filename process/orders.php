@@ -94,5 +94,25 @@
 
     } else if($method === "POST"){
 
+        // Verificando tipo de POST
+        $type = $_POST["type"];
+
+        // Deletar o pedido
+        if($type === "delete"){
+            $softwareId = $_POST["id"];
+
+            $deleteQuery = $conn->prepare("DELETE FROM pedidos WHERE software_id = :software_id;");
+
+            $deleteQuery->bindParam(":software_id", $softwareId, PDO::PARAM_INT);
+
+            $deleteQuery->execute();
+
+            $_SESSION["msg"] = "Pedido removido com sucesso!";
+            $_SESSION["status"] = "success";
+        }
+
+        // Retorna o usuário para a dashboard
+        header("Location:../dashboard.php");
+
     }
 ?>
